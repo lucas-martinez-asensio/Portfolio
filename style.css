@@ -1,0 +1,246 @@
+:root {
+  --text-color: #3e4147;
+  --back-color: #efeaec;
+  --third-color: #cc4425;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Raleway", sans-serif;
+  background-color: var(--back-color);
+}
+
+.container {
+  width: 100%;
+  height: 100rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.description h1 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.father-img {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.father-img .img {
+  width: 100%;
+  filter: brightness(1.1);
+  mix-blend-mode: multiply;
+  max-width: 7rem;
+}
+
+.knowledge {
+  width: 100%;
+  height: 18rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.knowledge h2,
+p {
+  color: var(--text-color);
+  text-align: center;
+  width: 100%;
+}
+
+.knowledge__habilidades {
+  width: 100%;
+  height: 9rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.father-img .logo {
+  filter: brightness(1.1);
+  mix-blend-mode: multiply;
+  max-width: 3rem;
+}
+.knowledge__conocimientos {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.knowledge p {
+  font-size: 1.25rem;
+}
+
+.forms {
+  color: #181a1d;
+  background-color: var(--third-color);
+  margin-top: 5rem;
+  height: 40%;
+  width: 100%;
+}
+
+.forms article {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.forms h1 {
+  font-size: 1.35rem;
+  padding-bottom: 0.5rem;
+}
+
+.forms input,
+textarea {
+  border-radius: 0.5rem;
+  border: transparent 0.1rem var(--text-color);
+  padding: 0.5rem;
+  margin: 0.5rem;
+}
+
+.div__message textarea {
+  width: 18rem;
+}
+
+@media (min-width: 800px) {
+  .nav_button-container {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+  }
+
+  .nav_button-container--li {
+    list-style: none;
+  }
+
+  .nav_button-container a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 2.3rem;
+    padding: 0 3.5rem;
+  }
+
+  .nav_button-container a:hover {
+    border-bottom: 0.3rem solid #cc4425;
+  }
+
+  .description {
+    align-items: center;
+    height: 25rem;
+  }
+
+  .description h1 {
+    font-size: 2.2rem;
+    width: 70%;
+  }
+
+  .description figure {
+    width: 30%;
+  }
+
+  .description picture {
+    justify-content: start;
+  }
+
+  .description .img {
+    justify-content: start;
+    width: 30%;
+  }
+
+  .knowledge {
+    width: 100%;
+    justify-content: space-evenly;
+    height: 10rem;
+  }
+
+  .knowledge__habilidades {
+    padding-left: 12.5rem;
+    width: 40%;
+    height: 10rem;
+    display: flex;
+  }
+
+  .knowledge__conocimientos {
+    width: 60%;
+    height: 10rem;
+    display: flex;
+  }
+
+  .knowledge h2 {
+    font-size: 2rem;
+  }
+  .knowledge p {
+    font-size: 1.75rem;
+  }
+
+  .knowledge .logo {
+    justify-content: center;
+    padding-top: 1.25rem;
+    max-width: 5rem;
+  }
+
+  .forms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .forms article {
+    width: 25rem;
+  }
+
+  .forms h1 {
+    font-size: 1.55rem;
+  }
+
+  .forms form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .forms label {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .forms input {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .div__name,
+  .div__mail {
+    width: 49%;
+  }
+
+  .div__message textarea {
+    width: 25rem;
+  }
+}
