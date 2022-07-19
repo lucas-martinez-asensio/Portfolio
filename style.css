@@ -1,7 +1,7 @@
 :root {
   --text-color: #3e4147;
-  --back-color: #efeaec;
-  --third-color: #cc4425;
+  --back-color: #ffffff;
+  --third-color: #df8e58;
 }
 
 * {
@@ -14,6 +14,61 @@ html {
   font-size: 62.5%;
   font-family: "Raleway", sans-serif;
   background-color: var(--back-color);
+}
+
+.nav_button-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  align-items: center;
+  background-color: var(--text-color);
+  height: 100%;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nav_button-container--li {
+  list-style: none;
+  line-height: 6rem;
+  font-weight: bold;
+}
+
+.nav_button-container a {
+  color: var(--back-color);
+  text-decoration: none;
+}
+
+.open-menu {
+  display: flex;
+  border: none;
+  background: none;
+}
+
+.open-menu img {
+  margin: 0.6rem;
+  width: 4rem;
+}
+
+.close-menu {
+  display: flex;
+  border: none;
+  background: none;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.close-menu img {
+  margin: 0.5rem;
+  width: 4rem;
+}
+
+.menu_opened {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .container {
@@ -81,6 +136,12 @@ p {
   mix-blend-mode: multiply;
   max-width: 3rem;
 }
+
+.father-img .logo:hover {
+  filter: brightness(1.2);
+  /* box-shadow: 0 4px 5px var(--text-color); */
+}
+
 .knowledge__conocimientos {
   width: 100%;
   height: 6rem;
@@ -91,6 +152,7 @@ p {
 
 .knowledge p {
   font-size: 1.25rem;
+  color: var(--text-color);
 }
 
 .forms {
@@ -111,6 +173,7 @@ p {
 .forms h1 {
   font-size: 1.35rem;
   padding-bottom: 0.5rem;
+  color: var(--back-color);
 }
 
 .forms input,
@@ -126,27 +189,36 @@ textarea {
 }
 
 @media (min-width: 800px) {
-  .nav_button-container {
-    width: 100%;
-    height: 6rem;
-    display: flex;
-    justify-content: right;
-    align-items: center;
+  .open-menu,
+  .close-menu {
+    display: none;
   }
 
-  .nav_button-container--li {
-    list-style: none;
+  .nav {
+    /* display: fixed; */
+  }
+
+  .nav_button-container {
+    background-color: var(--back-color);
+    width: 100%;
+    height: 6rem;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    overflow-y: hidden;
+    opacity: 1;
+    pointer-events: all;
   }
 
   .nav_button-container a {
+    font-size: 1.75rem;
     color: var(--text-color);
-    text-decoration: none;
-    font-size: 2.3rem;
     padding: 0 3.5rem;
+    transition: all ease-in-out 120ms;
   }
 
   .nav_button-container a:hover {
-    border-bottom: 0.3rem solid #cc4425;
+    border-bottom: 0.3rem solid var(--third-color);
   }
 
   .description {
@@ -244,3 +316,4 @@ textarea {
     width: 25rem;
   }
 }
+
