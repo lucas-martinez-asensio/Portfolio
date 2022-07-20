@@ -8,3 +8,13 @@ function toggleMenu() {
 
 openMenuButton.addEventListener("click", toggleMenu);
 closeMenuButton.addEventListener("click", toggleMenu);
+
+const aboutMeBtn = document.querySelector(".about-me");
+const skillsBtn = document.querySelector(".skills");
+const reposBtn = document.querySelector(".repos");
+const socialBtn = document.querySelector(".social");
+
+aboutMeBtn.addEventListener("click", toggleMenu);
+skillsBtn.addEventListener("click", toggleMenu);
+reposBtn.addEventListener("click", toggleMenu);
+socialBtn.addEventListener("click", toggleMenu);
