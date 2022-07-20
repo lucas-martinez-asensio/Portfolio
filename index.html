@@ -11,15 +11,23 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./img/android-chrome-192x192.png"
+    />
   </head>
   <body>
     <header>
       <nav class="nav">
         <button class="open-menu" aria-label="Abrir menú">
-          <img src="./img/hamburguer.png" alt="Abrir menú">
+          <img src="./img/hamburger.png" alt="Abrir menú" />
         </button>
         <ul class="nav_button-container">
-          <button class="close-menu" aria-label="Cerrar menú"><img src="./img/close.png" alt="Cerrar menú"></button>
+          <button class="close-menu" aria-label="Cerrar menú">
+            <img src="./img/close.png" alt="Cerrar menú" />
+          </button>
           <li class="nav_button-container--li"><a href="">Sobre mí</a></li>
           <li class="nav_button-container--li"><a href="">Proyectos</a></li>
           <li class="nav_button-container--li"><a href="">Contacto</a></li>
@@ -30,6 +38,7 @@
     <main class="container">
       <section class="description">
         <h1>
+          < Lucas Martinez Asensio/> <br /><br />
           Estudiante de diseño web en constante formación. Buenos Aires,
           Argentina.
         </h1>
@@ -79,15 +88,56 @@
         <article class="knowledge__conocimientos">
           <h2>Conocimientos</h2>
           <p>
-            POO, POE, Mobile first, Responsive design, Accesibilidad, Pensamiento
-            Computacional, etc.
+            POO, POE, Mobile first, Responsive design, Accesibilidad,
+            Pensamiento Computacional, Asincronismo.
           </p>
+        </article>
+        <article class="projects">
+          <h2>Proyectos</h2>
+          <figure class="projects__container">
+            <a href="https://effulgent-dodol-1fc7da.netlify.app"
+              ><img
+                src="./img/resultado-guthub-shuffler.JPG"
+                alt="Proyecto: Mezclador de repositorios"
+                class="projects__example github-shuffler"
+            /></a>
+            <a href="https://classy-jalebi-3a07b7.netlify.app"
+              ><img
+                src="./img/resultado-responsive-design.JPG"
+                alt="Proyecto de Responsive Design"
+                class="projects__example responsive-design"
+            /></a>
+            <a href="https://cerulean-tartufo-c03319.netlify.app"
+              ><img
+                src="./img/resultado-pixel-creator.JPG"
+                alt="Proyecto de lienzo para pintar"
+                class="projects__example pixel-creator"
+            /></a>
+          </figure>
         </article>
       </section>
       <section class="forms">
         <article>
           <h1>Contacto</h1>
-          <form action="">
+          <figure class="icon__container">
+            <a href="https://www.linkedin.com/in/lucas-martinez-asensio/"
+              ><img
+                src="./img/linkedin-icon.png"
+                alt="Ícono de linkedin"
+                class="linkedin" /></a
+            ><a href="https://twitter.com/Lucas_m_asensio"
+              ><img
+                src="./img/twitter-icon.png"
+                alt="Ícono de twitter"
+                class="twitter" /></a
+            ><a href="mailto:martinezasensiolucas@gmail.com"
+              ><img
+                src="./img/gmail-icon.png"
+                alt="Ícono de gmail"
+                class="gmail"
+            /></a>
+          </figure>
+          <!-- <form action="">
             <div class="div__name">
             <label for="name">
               <input type="text" id="nombre" placeholder="nombre" class="forms__name" /> </label
@@ -99,7 +149,7 @@
              <textarea name="mensaje" id="message" cols="28" rows="6" placeholder="mensaje" class="forms__message"></textarea> </label
             >
             </label></div>
-          </form>
+          </form> -->
         </article>
       </section>
     </main>

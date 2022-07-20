@@ -24,11 +24,14 @@ html {
   top: 0;
   width: 100%;
   align-items: center;
-  background-color: var(--text-color);
+  background-color: var(--back-color);
   height: 100%;
   overflow-y: auto;
+  font-size: 1.75rem;
   opacity: 0;
   pointer-events: none;
+
+  transition: opacity 0.35s;
 }
 
 .nav_button-container--li {
@@ -38,7 +41,7 @@ html {
 }
 
 .nav_button-container a {
-  color: var(--back-color);
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -50,7 +53,7 @@ html {
 
 .open-menu img {
   margin: 0.6rem;
-  width: 4rem;
+  width: 4.2rem;
 }
 
 .close-menu {
@@ -62,8 +65,8 @@ html {
 }
 
 .close-menu img {
-  margin: 0.5rem;
-  width: 4rem;
+  margin: 1.3rem;
+  width: 2.5rem;
 }
 
 .menu_opened {
@@ -73,18 +76,24 @@ html {
 
 .container {
   width: 100%;
-  height: 100rem;
+  height: auto;
   display: flex;
   flex-direction: column;
+  /* justify-content: space-evenly; */
+  align-items: center;
 }
 
 .description {
   width: 100%;
-  height: 20rem;
+  height: 30rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.description .description__name {
+  font-size: 1.5rem;
 }
 
 .description h1 {
@@ -94,7 +103,6 @@ html {
 }
 
 .father-img {
-  margin-bottom: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -103,21 +111,24 @@ html {
 
 .father-img .img {
   width: 100%;
-  filter: brightness(1.1);
-  mix-blend-mode: multiply;
+  background: none;
+  /* filter: brightness(1.1);
+  mix-blend-mode: multiply; */
   max-width: 7rem;
 }
 
 .knowledge {
   width: 100%;
-  height: 18rem;
+  height: 80rem;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  /* margin: 10rem; */
+  /* align-items: center; */
 }
 
 .knowledge h2,
 p {
+  font-size: 1.5rem;
   color: var(--text-color);
   text-align: center;
   width: 100%;
@@ -129,16 +140,17 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 3rem;
 }
 
 .father-img .logo {
-  filter: brightness(1.1);
-  mix-blend-mode: multiply;
-  max-width: 3rem;
+  background: none;
+  max-width: 4rem;
 }
 
 .father-img .logo:hover {
   filter: brightness(1.2);
+  transition: all ease-in-out 350ms;
   /* box-shadow: 0 4px 5px var(--text-color); */
 }
 
@@ -148,35 +160,66 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: -2rem;
 }
 
 .knowledge p {
+  margin-top: 0.6rem;
   font-size: 1.25rem;
   color: var(--text-color);
+}
+
+.projects {
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+}
+
+.projects h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.projects__container {
+  align-items: center;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projects__example {
+  margin: 1.3rem;
+  width: 12rem;
+  height: 11rem;
+  border-radius: 2rem;
 }
 
 .forms {
   color: #181a1d;
   background-color: var(--third-color);
-  margin-top: 5rem;
-  height: 40%;
+  /* margin-top: 5rem; */
+  height: 5%;
   width: 100%;
 }
 
 .forms article {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .forms h1 {
-  font-size: 1.35rem;
-  padding-bottom: 0.5rem;
+  font-size: 1.2rem;
+  /* padding-bottom: 0.5rem; */
   color: var(--back-color);
 }
 
-.forms input,
+/* .forms input,
 textarea {
   border-radius: 0.5rem;
   border: transparent 0.1rem var(--text-color);
@@ -186,6 +229,18 @@ textarea {
 
 .div__message textarea {
   width: 18rem;
+} */
+
+.icon__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.icon__container img {
+  width: 3rem;
+  margin: 0.5rem 2rem;
 }
 
 @media (min-width: 800px) {
@@ -201,7 +256,7 @@ textarea {
   .nav_button-container {
     background-color: var(--back-color);
     width: 100%;
-    height: 6rem;
+    height: 5rem;
     flex-direction: row;
     justify-content: right;
     align-items: center;
@@ -211,23 +266,29 @@ textarea {
   }
 
   .nav_button-container a {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: var(--text-color);
     padding: 0 3.5rem;
-    transition: all ease-in-out 120ms;
+    transition: all ease-in-out 220ms;
   }
 
   .nav_button-container a:hover {
-    border-bottom: 0.3rem solid var(--third-color);
+    color: var(--third-color);
   }
 
   .description {
     align-items: center;
-    height: 25rem;
+    height: 50rem;
+  }
+
+  .description .description__name {
+    width: 100%;
+    text-align: start;
+    font-size: 1.75rem;
   }
 
   .description h1 {
-    font-size: 2.2rem;
+    font-size: 1.75rem;
     width: 70%;
   }
 
@@ -237,6 +298,7 @@ textarea {
 
   .description picture {
     justify-content: start;
+    display: flex;
   }
 
   .description .img {
@@ -246,28 +308,30 @@ textarea {
 
   .knowledge {
     width: 100%;
-    justify-content: space-evenly;
-    height: 10rem;
+    justify-content: space-between;
+    height: 45rem;
   }
 
   .knowledge__habilidades {
-    padding-left: 12.5rem;
-    width: 40%;
+    padding-left: 10.5rem;
+    width: 30%;
     height: 10rem;
     display: flex;
+    margin: 0;
   }
 
   .knowledge__conocimientos {
+    margin-top: 0;
     width: 60%;
     height: 10rem;
     display: flex;
   }
 
   .knowledge h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   .knowledge p {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .knowledge .logo {
@@ -276,20 +340,30 @@ textarea {
     max-width: 5rem;
   }
 
-  .forms {
+  .projects__container {
+    margin-top: 0.8rem;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .forms h1 {
+    font-size: 1.5rem;
+  }
+
+  /* .forms {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    height: 30%;
   }
 
   .forms article {
-    width: 25rem;
+    width: 50rem;
   }
 
-  .forms h1 {
-    font-size: 1.55rem;
-  }
 
   .forms form {
     display: flex;
@@ -309,11 +383,11 @@ textarea {
 
   .div__name,
   .div__mail {
-    width: 49%;
+    width: 50%;
   }
 
   .div__message textarea {
-    width: 25rem;
-  }
+    width: 49rem;
+    height: 15rem;
+  } */
 }
-
