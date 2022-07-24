@@ -309,7 +309,7 @@ textarea {
 
   .description {
     align-items: center;
-    height: 50rem;
+    height: 70rem;
   }
 
   .description .description__name {
@@ -344,7 +344,7 @@ textarea {
   .knowledge {
     width: 100%;
     justify-content: space-between;
-    height: 50rem;
+    height: 70rem;
   }
 
   .knowledge__habilidades {
@@ -375,7 +375,12 @@ textarea {
     width: 4rem;
   }
 
+  .projects {
+    margin-top: 20rem;
+  }
+
   .projects h2 {
+    margin-top: 5rem;
     margin-bottom: 1.7rem;
   }
 
