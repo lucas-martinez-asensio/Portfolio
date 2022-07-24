@@ -5,6 +5,15 @@
   --third-color: #df8e58;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -101,6 +110,7 @@ html {
   font-size: 1.5rem;
   color: var(--text-color);
   text-align: center;
+  animation: fadeIn 1.6s;
 }
 
 .father-img {
@@ -116,11 +126,12 @@ html {
   /* filter: brightness(1.1);
   mix-blend-mode: multiply; */
   max-width: 7rem;
+  animation: fadeIn 0.8s;
 }
 
 .knowledge {
   width: 100%;
-  height: 80rem;
+  height: 120rem;
   display: flex;
   flex-wrap: wrap;
   /* margin: 10rem; */
@@ -133,6 +144,7 @@ p {
   color: var(--text-color);
   text-align: center;
   width: 100%;
+  animation: fadeIn 0.8s;
 }
 
 .knowledge__habilidades {
@@ -146,7 +158,14 @@ p {
 
 .father-img .logo {
   background: none;
-  max-width: 4rem;
+  width: 4rem;
+  animation: fadeIn 0.8s;
+}
+
+.figure .father-img .sql {
+  background: none;
+  width: 6.5rem;
+  height: 8rem;
 }
 
 .father-img .logo:hover {
@@ -168,6 +187,7 @@ p {
   margin-top: 0.6rem;
   font-size: 1.25rem;
   color: var(--text-color);
+  animation: fadeIn 0.8s;
 }
 
 .projects {
@@ -181,6 +201,7 @@ p {
 .projects h2 {
   width: 100%;
   text-align: center;
+  margin-bottom: -1.5rem;
 }
 
 .projects__container {
@@ -193,10 +214,17 @@ p {
 }
 
 .projects__example {
-  margin: 1.3rem;
+  margin: 3rem;
   width: 12rem;
   height: 11rem;
   border-radius: 2rem;
+  animation: fadeIn 0.8s;
+}
+
+.projects a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.25rem;
 }
 
 .forms {
@@ -218,6 +246,7 @@ p {
   font-size: 1.2rem;
   /* padding-bottom: 0.5rem; */
   color: var(--back-color);
+  animation: fadeIn 0.8s;
 }
 
 /* .forms input,
@@ -242,6 +271,7 @@ textarea {
 .icon__container img {
   width: 3rem;
   margin: 0.5rem 2rem;
+  animation: fadeIn 0.8s;
 }
 
 @media (min-width: 800px) {
@@ -257,7 +287,7 @@ textarea {
   .nav_button-container {
     background-color: var(--back-color);
     width: 100%;
-    height: 5rem;
+    height: 8rem;
     flex-direction: row;
     justify-content: right;
     align-items: center;
@@ -267,7 +297,7 @@ textarea {
   }
 
   .nav_button-container a {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     color: var(--text-color);
     padding: 0 3.5rem;
     transition: all ease-in-out 220ms;
@@ -292,6 +322,10 @@ textarea {
     font-size: 1.75rem;
     width: 70%;
   }
+  /* 
+  .description span {
+    font-size: 2rem;
+  } */
 
   .description figure {
     width: 30%;
@@ -338,11 +372,15 @@ textarea {
   .knowledge .logo {
     justify-content: center;
     padding-top: 1.25rem;
-    max-width: 5rem;
+    width: 4rem;
+  }
+
+  .projects h2 {
+    margin-bottom: 1.7rem;
   }
 
   .projects__container {
-    margin-top: 0.8rem;
+    margin-top: 1.7rem;
     align-items: center;
     width: 100%;
     height: auto;
@@ -350,6 +388,11 @@ textarea {
     flex-direction: row;
     justify-content: center;
   }
+
+  .projects .projects__example {
+    margin: 1rem 5rem;
+  }
+
   .forms h1 {
     font-size: 1.5rem;
   }
