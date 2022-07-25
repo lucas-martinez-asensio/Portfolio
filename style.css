@@ -15,20 +15,10 @@
 
 @keyframes fall {
   0% {
-    margin-top: -100rem;
+    margin-top: -60rem;
   }
   100% {
     margin-top: -7.5rem;
-  }
-}
-
-@keyframes colors {
-  0% {
-    color: #df8e5800;
-  }
-
-  100% {
-    color: #000000;
   }
 }
 
@@ -300,8 +290,6 @@ p {
   height: 10rem;
   background-color: #df8e5862;
   border-radius: 5rem;
-  /* animation: fall 1s cubic-bezier(0, 0.72, 0.26, 0.98); */
-
   animation: fall 1s;
 }
 
