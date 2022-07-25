@@ -351,9 +351,7 @@ p {
   }
 
   .description h2 {
-    position: relative;
     margin-top: -6rem;
-    /* margin-left: 15rem; */
     text-align: left;
     align-items: center;
     font-size: 4rem;
