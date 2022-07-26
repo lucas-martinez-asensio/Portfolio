@@ -176,6 +176,11 @@ p {
   height: 8rem;
 }
 
+.figure .father-img .html-css {
+  background: none;
+  width: 3.2rem;
+}
+
 .father-img .logo:hover {
   filter: brightness(1.2);
   transition: all ease-in-out 350ms;
@@ -209,6 +214,10 @@ p {
   width: 100%;
   text-align: center;
   margin-bottom: -1.5rem;
+}
+
+.projects a {
+  color: var(--text-color);
 }
 
 .projects__container {
@@ -433,7 +442,7 @@ p {
   .knowledge .logo {
     justify-content: center;
     padding-top: 1.25rem;
-    width: 4rem;
+    /* width: 4rem; */
   }
 
   .projects {
