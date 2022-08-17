@@ -44,8 +44,8 @@ html {
   align-items: center;
   background-color: var(--back-color);
   height: 100%;
-  overflow-y: auto;
   font-size: 1.75rem;
+  overflow-y: auto;
   opacity: 0;
   pointer-events: none;
 
